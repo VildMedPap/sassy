@@ -1,0 +1,60 @@
+@mixin reset() {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        scroll-behavior: smooth;
+        line-height: 1.5;
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+        font: inherit;
+    }
+}
+
+@mixin flexbox-center() {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin position($top, $right: $top, $bottom: $top, $left: $right) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin make-circular() {
+    border-radius: 50%;
+}
+
+// Mobile first
+@mixin desktop {
+    @media only screen and (min-width: 40rem) {
+        @content;
+    }
+}
+
+// Desktop first
+@mixin mobile {
+    @media only screen and (max-width: 40rem) {
+        @content;
+    }
+}
