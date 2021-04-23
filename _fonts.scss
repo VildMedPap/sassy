@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
+@mixin Montserrat($weight: normal, $style: normal) {
+    font-family: "Montserrat", sans-serif;
+    font-weight: $weight;
+    font-style: $style;
+}
+
+@mixin RobotoMono($weight: normal, $style: normal) {
+    font-family: "Roboto Mono", monospace;
+    font-weight: $weight;
+    font-style: $style;
+}
+
+body {
+    @include Montserrat();
+}
